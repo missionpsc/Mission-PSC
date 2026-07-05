@@ -1,0 +1,23 @@
+const sections = [
+    { name: 'Lessons Page Door', desc: 'Study materials and resource stacks' },
+    { name: 'Quizzes Page Door', desc: 'Rapid question modules' },
+    { name: 'Examinations Page Door', desc: 'High-capacity assessment decks' },
+    { name: 'Approval Registry Page Door', desc: 'Review, accept, or deny requests' },
+    { name: 'Attendance Matrix Page Door', desc: 'Real-time roll list tracker' },
+    { name: 'About & Notifications', desc: 'System properties and alerts' }
+];
+
+const menu = document.getElementById('menu-container');
+
+sections.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'module-card';
+    card.innerHTML = `
+        <div class="module-icon">📖</div>
+        <div>
+            <strong>${s.name}</strong>
+            <div style="font-size: 12px; color: #868e96;">${s.desc}</div>
+        </div>
+    `;
+    menu.appendChild(card);
+});
